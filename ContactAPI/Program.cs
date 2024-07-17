@@ -10,8 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<IContactService, ContactService>();
-builder.Services.AddTransient<IContactRepository, ContactRepository>();
+builder.Services.AddSingleton<IContactService, ContactService>();
+builder.Services.AddSingleton<IContactRepository, ContactRepository>();
 
 var app = builder.Build();
 

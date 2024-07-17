@@ -28,5 +28,4 @@ namespace ContactAPI.model
             return new ValidationResult("The field must be greater than 0.");
         }
     }
-
 }

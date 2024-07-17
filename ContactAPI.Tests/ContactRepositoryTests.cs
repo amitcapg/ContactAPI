@@ -65,7 +65,7 @@ namespace ContactWebAPI.Tests
             var contactRepository = new ContactRepository(mockLogger.Object);
             var contact = new Contact { Id = 1, Name = "John Doe", Email = "john.doe@example.com" };
 
-            if (ContactRepository.Contacts.Count > 0)
+            if (!ContactRepository.Contacts.IsEmpty)
             {
                 ContactRepository.Contacts.Clear();
             }
